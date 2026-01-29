@@ -50,5 +50,5 @@ python client.py
 - **Запуск всех тестов**
 
 ```bash
-pytest
+python -m pytest
 ```
