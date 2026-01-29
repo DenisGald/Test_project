@@ -1,0 +1,47 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Пример Aiohttp API",
+    "version": "v1"
+  },
+  "paths": {
+    "/hello": {
+      "get": {
+        "summary": "Пример эндпоинта hello",
+        "description": "Возвращает простое сообщение, чтобы проверить работу сервера.",
+        "tags": [
+          "hello"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HelloResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "HelloResponse": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "message"
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+}
+
